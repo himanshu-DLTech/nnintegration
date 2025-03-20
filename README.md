@@ -1,2 +1,6 @@
 # nnintegration
-Neuranet Integration with Tekmonks ASB
+Neuranet Integrations with Tekmonks ASB.
+
+Needs
+- Neuranet
+- ASB 
