@@ -1,0 +1,35 @@
+{
+    "name": "neuranet_agent",
+    "version": "1.0.0",
+    "description": "neuranet agent - code analyzer",
+    "keywords": [
+        "AI",
+        "agent",
+        "skynet",
+        "terminator"
+    ],
+    "homepage": "https://github.com/sid-dlt/agent#readme",
+    "bugs": {
+        "url": "https://github.com/sid-dlt/agent/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sid-dlt/agent.git"
+    },
+    "license": "ISC",
+    "author": "Siddharth & Himanshu",
+    "type": "commonjs",
+    "main": "startDocumentation.js",
+    "directories": {
+        "lib": "lib"
+    },
+    "scripts": {
+        "test": "node startDocumentation.js"
+    },
+    "dependencies": {
+        "@dqbd/tiktoken": "^1.0.21",
+        "axios": "^1.9.0",
+        "dotenv": "^17.0.0",
+        "glob": "^11.0.3"
+    }
+}

@@ -1,0 +1,35 @@
+{
+	"flow":{
+		"name":"Analyze Input Repo API Code for Documentation",
+		"disabled":false,
+		"expandRouteProperties": true
+	},
+	"listener": {
+		"type":"rest_listener", 
+		"isMessageGenerator": true,
+		"host": "127.0.0.1",
+        "isSecure": false,
+        "keyFile": "/home/deep/ssl/openSSL/server.key",
+        "certFile": "/home/deep/ssl/openSSL/server.crt",
+		"port":9090,
+		"url":"/analyze",
+		"allow_origin": "*",
+		"timeout": 120000
+	},
+	"route0":{
+		"type": "js",
+		"dependencies":["listener"],
+		"isAsync": false,
+		"module":"{{{ESB_DIR}}}/custom/agent/repoExtracter.js"
+	},
+	"route1":{
+		"type": "js",
+		"dependencies":["listener", "route0"],
+		"isAsync": false,
+		"module":"{{{ESB_DIR}}}/custom/agent/startDocumentation.js"
+	},
+	"output": {
+		"type":"rest_responder",
+		"dependencies":["listener", "route0", "route1"]
+	}
+}

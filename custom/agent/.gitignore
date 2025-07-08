@@ -1,0 +1,24 @@
+# ignore input source code
+wallet
+wallet/
+wallet/*
+
+# Ignore output directories
+documentationOutputDirectory/*.*
+documentationOutputDirectory/*/
+clonedRepos/*.*
+clonedRepos/*/
+
+# Ignore log files
+log/*
+
+# Ignore build artifacts
+node_modules
+node_modules/
+node_modules/*
+
+# ignore environment files
+.env
+
+# ignore logs
+package-lock.json

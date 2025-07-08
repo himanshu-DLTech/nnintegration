@@ -1,0 +1,26 @@
+{
+    "flow": {
+        "name":"REST API for download a zip file of the API code documentation",
+        "disabled": false,
+        "expandRouteProperties": true
+    },
+    "listener": {
+        "type":"http_listener",
+        "isMessageGenerator": true,
+        "host": "127.0.0.1",
+        "isSecure": true,
+        "keyFile": "/home/deep/ssl/openSSL/server.key",
+        "certFile": "/home/deep/ssl/openSSL/server.crt",
+        "port":8080,
+        "url":"/download",
+        "allow_origin": "*",
+        "timeout": 120000,
+        "method":"get"
+    },
+    "route0":{
+		"type": "js",
+		"dependencies":"listener",
+		"module":"{{{ESB_DIR}}}/custom/agent/downloadDocumentation.js"
+	}
+    
+}
